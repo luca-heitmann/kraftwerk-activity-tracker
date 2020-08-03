@@ -1,0 +1,10 @@
+version: "3"
+
+services:
+  kraftwerk:
+    image: luca-heitmann/kraftwerk-activity-tracker
+    environment:
+      - INTERVAL_SECONDS=10
+      - OUTPUT_FILE=/data/output.csv
+    volumes:
+      - ./data:/data:z
