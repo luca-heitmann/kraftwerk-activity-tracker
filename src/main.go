@@ -23,7 +23,6 @@ func main() {
 		counter, max, err := getClientCounter()
 		if err != nil {
 			log.Println("Unable to get results: ", err)
-			os.Exit(1)
 		}
 
 		// Write results to output file
@@ -32,7 +31,6 @@ func main() {
 			csvData := fmt.Sprintf("%s;%d;%d\n", timestamp, counter, max)
 			if err := writeToDataFile(conf.OutputFile, csvData); err != nil {
 				log.Println("Unable to write to data file: ", err)
-				os.Exit(2)
 			}
 		}
 
