@@ -1,1 +1,1 @@
-docker build -t luca-heitmann/kraftwerk-activity-tracker .
+docker build -t lucaheitmann/kraftwerk-activity-tracker .
